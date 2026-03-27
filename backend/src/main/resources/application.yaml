@@ -1,3 +1,41 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: productia
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/productia
+    username: productia
+    password: productia
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+app:
+  cors:
+    allowed-origins:
+      - http://localhost:4200
+
+  security:
+    jwt-secret: change-this-in-local-env-change-this-in-local-env
+    jwt-expiration-minutes: 480
