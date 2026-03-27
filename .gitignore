@@ -1,0 +1,42 @@
+# IntelliJ
+.idea/
+**/.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+backend/target/
+**/target/
+
+# Maven wrapper jar (opcional: normalmente se commitea, aquí lo dejamos fuera si prefieres repo más limpio)
+# backend/.mvn/wrapper/maven-wrapper.jar
+
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+**/node_modules/
+**/dist/
+
+# Logs
+*.log
+logs/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Angular environments locales
+frontend/src/environments/*.local.ts
+
+# Build / temp
+tmp/
+temp/
+out/
